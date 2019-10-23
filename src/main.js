@@ -3,11 +3,6 @@
 // node modul
 import BootstrapSocial from 'bootstrap-social';
 
-// fontawesome
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-
 import Vue from 'vue';
 import App from './App';
 import router from './router';
@@ -18,8 +13,6 @@ import './assets/css/style.css';
 import './assets/css/components.css';
 
 Vue.use(BootstrapSocial);
-library.add(faUserSecret);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
