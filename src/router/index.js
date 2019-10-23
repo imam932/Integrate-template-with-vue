@@ -12,7 +12,10 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/home', component: () => import('../views/Home')
+      path: '/dashboard', component: () => import('../views/Home'),
+      children: [
+        { path: '/dashboard', component: () => import('../views/dashboards/Dashboard') }
+      ]
     },
     {
       path: '/login', component: () => import('../views/Login')
