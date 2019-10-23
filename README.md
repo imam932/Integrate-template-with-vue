@@ -1,8 +1,8 @@
-# ui-theme-with-vue-and-static-data
+# [ui-theme-with-vue-and-static-data](https://github.com/imam932/Integrate-template-with-vue)
 
 > Build project ui theme with vue
 
-## Build Setup
+## Get started to Setup Project
 
 ``` bash
 # install dependencies
@@ -10,18 +10,7 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
 ```
+if your applicatation is running in port http://localhost:8080, now open in your browser with url http://localhost:8080
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
