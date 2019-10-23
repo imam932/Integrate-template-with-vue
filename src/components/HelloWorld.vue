@@ -86,21 +86,12 @@
 <script>
 export default {
   name: 'HelloWorld',
-<<<<<<< HEAD
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   }
 }
-=======
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
-  },
-};
->>>>>>> fc7042f6d773278950f16664806c2202d3583364
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
