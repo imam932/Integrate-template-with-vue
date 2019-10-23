@@ -9,7 +9,6 @@ function resolve (dir) {
 }
 
 
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
@@ -31,6 +30,10 @@ module.exports = {
   },
   module: {
     rules: [
+<<<<<<< HEAD
+=======
+      ...(config.dev.useEslint ? [createLintingRule()] : []),
+>>>>>>> fc7042f6d773278950f16664806c2202d3583364
       {
         test: /\.vue$/,
         loader: 'vue-loader',
