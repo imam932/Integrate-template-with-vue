@@ -119,93 +119,9 @@
                   </div>
                 </div>
                 <div class="card-body" id="top-5-scroll">
-                  <ul class="list-unstyled list-unstyled-border">
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="@/assets/img/products/product-3-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">86 Sales</div></div>
-                        <div class="media-title">oPhone S9 Limited</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="64%"></div>
-                            <div class="budget-price-label">$68,714</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="43%"></div>
-                            <div class="budget-price-label">$38,700</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="@/assets/img/products/product-4-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">67 Sales</div></div>
-                        <div class="media-title">iBook Pro 2018</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="84%"></div>
-                            <div class="budget-price-label">$107,133</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="60%"></div>
-                            <div class="budget-price-label">$91,455</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="@/assets/img/products/product-1-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">63 Sales</div></div>
-                        <div class="media-title">Headphone Blitz</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="34%"></div>
-                            <div class="budget-price-label">$3,717</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$2,835</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="@/assets/img/products/product-3-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">28 Sales</div></div>
-                        <div class="media-title">oPhone X Lite</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="45%"></div>
-                            <div class="budget-price-label">$13,972</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="30%"></div>
-                            <div class="budget-price-label">$9,660</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="@/assets/img/products/product-5-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">19 Sales</div></div>
-                        <div class="media-title">Old Camera</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="35%"></div>
-                            <div class="budget-price-label">$7,391</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$5,472</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                  
+                     <small-list-card :data="topproduk"></small-list-card>
+                    
                 </div>
                 <div class="card-footer pt-3 d-flex justify-content-center">
                   <div class="budget-price justify-content-center">
@@ -482,7 +398,89 @@
     </div>
 </template>
 <script>
+import SmallListCard from '@/components/Card/SmallListCard'
+import axios from 'axios';
+
 export default {
-    
+    components: {
+      SmallListCard
+    },
+    data() {
+      return {
+        topcountry: [],
+        topproduk: [
+          {
+            "id": 1,
+            "title": "oPhone S9 Limited",
+            "sales": "86",
+            "blue_price": "68,714",
+            "red_price": "38,700",
+            "slug": "product-3-50.png",
+            "created_at": "",
+            "updated_at": ""
+          },
+          {
+            "id": 2,
+            "title": "iBook Pro 2018",
+            "sales": "67",
+            "blue_price": "107,714",
+            "red_price": "91,700",
+            "slug": "product-4-50.png",
+            "created_at": "",
+            "updated_at": ""
+          },
+          {
+            "id": 3,
+            "title": "Headphone Blitz",
+            "sales": "63",
+            "blue_price": "3,717",
+            "red_price": "2,800",
+            "slug": "product-1-50.png",
+            "created_at": "",
+            "updated_at": ""
+          },
+          {
+            "id": 4,
+            "title": "oPhone X Lite",
+            "sales": "28",
+            "blue_price": "13,717",
+            "red_price": "9,800",
+            "slug": "product-3-50.png",
+            "created_at": "",
+            "updated_at": ""
+          },
+          {
+            "id": 5,
+            "title": "Old Camera",
+            "sales": "19",
+            "blue_price": "7,317",
+            "red_price": "5,400",
+            "slug": "product-5-50.png",
+            "created_at": "",
+            "updated_at": ""
+          },
+        ],
+        errors: []
+      }
+    },
+    created() {
+      axios.get('http://localhost:3000/article')
+      .then(response => {
+        this.topcountry = response.data
+
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
+  // console.log(this.topcountry)
+      // try {
+      // const response = axios.get('http://localhost:3000/article')
+      // this.topcountry = response.data
+      // console.log(response.data)
+      // } catch (e) {
+      //   this.errors.push(e)
+      // }
+
+    }
 }
 </script>

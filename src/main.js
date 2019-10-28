@@ -8,7 +8,6 @@ import App from './App'
 import router from './router'
 
 // assets css
-import './assets/css/bootstrap.min.css';
 import './assets/css/style.css';
 import './assets/css/components.css';
 

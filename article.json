@@ -1,0 +1,34 @@
+{
+  "article": [
+    {
+      "id": 0,
+      "title": "Go to the gym",
+      "body": "S",
+      "author": "A0",
+      "slug": "i",
+      "category_name": "cat",
+      "created_at": "",
+      "updated_at": ""
+    },
+    {
+      "title": "Walk the dog",
+      "body": "Op",
+      "author": "A0",
+      "slug": "imam.jpg",
+      "category_name": "cat",
+      "created_at": "",
+      "updated_at": "",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Get some pizza",
+      "body": "AB",
+      "author": "A0",
+      "slug": "i",
+      "category_name": "cat",
+      "created_at": "",
+      "updated_at": ""
+    }
+  ]
+}

@@ -15,6 +15,7 @@
 <script>
 import './assets/js/stisla.js';
 import './assets/js/scripts.js';
+// import '@/assets/js/page/index.js';
 
 export default {
   name: 'App',
